@@ -5,12 +5,12 @@ pipeline {
 }
 
     stages {
-        stage ( "build") {
+        stage ("build") {
           steps {
-               sh 'mvn clean deploy'
+              sh 'mvn clean deploy'
            }
   }
-          stage ( "sonarQube analysis") {
+          stage ("sonarQube analysis") {
              environment {
                 scannerHome = tool 'sonar-scanner-tool'
            }
