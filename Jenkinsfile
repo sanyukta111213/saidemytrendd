@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-          PATH = " opt/maven/bin:$PATH "
+          PATH = "opt/maven/bin:$PATH"
 }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
             steps{
                withSonarQubeEnv('sonar-server') {
 
-                  sh "${scannerHome}/bin/sonar-scanner"
+                 sh "${scannerHome}/bin/sonar-scanner"
  
               }
         }
